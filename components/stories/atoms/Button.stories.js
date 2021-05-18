@@ -6,5 +6,5 @@ export default {
 	component: Button,
 }
 
-export const Primary = () => <Button>Primary</Button>
-Primary.storyName = 'I am primary'
+export const Primary = () => <Button type="primary">Primary</Button>
+export const Secondary = () => <Button type="secondary">Secondary</Button>
