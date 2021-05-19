@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../../atomic/atoms/Button/'
+import Button from '../../atoms/Button/index'
 
 export default {
 	title: 'Atoms/Button',
