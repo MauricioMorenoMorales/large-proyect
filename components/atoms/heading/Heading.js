@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import classNames from 'classnames'
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-import './Heading.css'
+import './Heading.css';
 
 const Heading = ({ children, color, size }) => (
 	<heading
@@ -13,17 +13,17 @@ const Heading = ({ children, color, size }) => (
 	>
 		{children}
 	</heading>
-)
+);
 
 Heading.PropTypes = {
 	children: PropTypes.node.isRequired,
-	color: PropTypes.oneOf['primary'],
+	color: PropTypes.oneOf[('primary', 'default')],
 	size: PropTypes.oneOf[('xs', 'sm', 'md')],
-}
+};
 
 Heading.defaultProps = {
 	color: 'default',
 	size: 'md',
-}
+};
 
-export default Heading
+export default Heading;

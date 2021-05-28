@@ -1,5 +1,5 @@
 /* :root {
-	--primary-color: #9879e9;
+	--medium-purple: #9879e9;
 	--white: #fff;
 	--white-lilac: #e8e8e8;
 	--shadow: 0px 4px 5px var(var(--white-lilac));
@@ -21,7 +21,7 @@
 }
 
 .type-primary {
-	background: var(--primary-color);
+	background: var(--medium-purple);
 	color: var(--white);
 }
 
@@ -35,8 +35,8 @@
 
 .type-secondary {
 	background: transparent;
-	color: var(--primary-color);
-	border: 1px solid var(--primary-color);
+	color: var(--medium-purple);
+	border: 1px solid var(--medium-purple);
 }
 
 .type-secondary:hover {
