@@ -1,14 +1,6 @@
-const { choices, decisions } = require('../tokens');
-const fs = require('fs');
 
-const getValue = function (object) {
-	if (typeof object === 'object') {
-		getValue(object);
-	}
-	return;
-};
-
-const buildCustomProperties = function () {
+:root {
+	function () {
 	const choicesKeys = Object.keys(choices);
 	console.log('>>>>>choices keys', choicesKeys);
 	const choicesCustomProperties = choicesKeys.reduce((prev, curr) => {
@@ -26,6 +18,5 @@ const buildCustomProperties = function () {
 			return console.error(error);
 		}
 	});
-};
-
-buildCustomProperties();
+}
+}
