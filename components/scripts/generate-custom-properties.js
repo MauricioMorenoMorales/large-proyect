@@ -26,42 +26,10 @@ const transformTokens = function (parentKey, object) {
 };
 
 const buildCustomProperties = function () {
-	const choicesKeys = Object.keys(choices);
-
-	// const choicesCustomProperties = choicesKeys.reduce((prev, curr) => {
-	// 	return choices[curr];
-	// }, '');
-
-	let choicesstring = '';
-
-	// if (typeof choices['colors'] === 'object') {
-	// 	const colorkeys = Object.keys(choices['colors']);
-
-	// 	choicesstring = colorkeys.reduce((prev, curr) => {
-	// 		if (typeof choices['colors'][curr] === 'object') {
-	// 			const brandkeys = Object.keys(choices['colors'][curr]);
-	// 			const colorStr = brandkeys.reduce((prevBrandKeys, currBrandKeys) => {
-	// 				const value = choices['colors'][curr][currBrandKeys];
-	// 				return `
-	// 				${prevBrandKeys}
-	// 				--colors-${curr}-${currBrandKeys}: ${value};`;
-	// 			}, '');
-	// 			return `
-	// 			${prev}
-	// 			${colorStr}
-	// 			`;
-
-	// 			return brandkeys;
-	// 		} else {
-	// 			return `
-	// 			${prev}
-	// 			--colors-${curr}: ${choices['colors'][curr]};
-	// 			`;
-	// 		}
-	// 	}, '');
-	// }
-
-	const customProperties = transformTokens(null, choices);
+	const customProperties = `
+	${transformTokens(null, choices)}
+	${transformTokens(null, decisions)}
+	`;
 
 	const data = `
 :root {
@@ -71,7 +39,7 @@ const buildCustomProperties = function () {
 
 	fs.writeFile(
 		'./tokens.css',
-		data.replace(/\t/g, '').replace(/\n{2,}/g, '\n'),
+		data.replace(/\t/g, '').replace(/\n{2,}/g, '\n\t'),
 		'utf8',
 		error => {
 			if (error) {
