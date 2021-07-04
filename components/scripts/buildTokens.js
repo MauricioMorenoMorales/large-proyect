@@ -25,7 +25,7 @@ const transformTokens = function (parentKey, object) {
 	return;
 };
 
-const buildCustomProperties = function () {
+const buildTokens = function () {
 	const customProperties = `
 	${transformTokens(null, choices)}
 	${transformTokens(null, decisions)}
@@ -49,4 +49,4 @@ const buildCustomProperties = function () {
 	);
 };
 
-buildCustomProperties();
+buildTokens();
