@@ -33,7 +33,20 @@ const buildTokens = function () {
 
 	const data = `
 :root {
-	${customProperties}
+	--colors-brand-medium-purple: #9879e9;
+	--colors-brand-white: #fff;
+	--colors-brand-white-lilac: #e8e8e8;
+	--shadow: 0px 4px 5px var(var(--colors-brand-white-lilac));
+	--colors-brand-mediumPurple: #9879e9;
+	--colors-brand-white: #fff;
+	--colors-brand-whiteLilac: #e8e8e8;
+	--colors-brand-east-bay: #455970;
+	--colors-transparent: transparent;
+	--colors-black: #000;
+	--colors-white: #fff;
+	${customProperties
+		.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2')
+		.toLowerCase()}
 }
 `;
 

@@ -1,16 +1,10 @@
-/* :root {
-	--medium-purple: #9879e9;
-	--white: #fff;
-	--white-lilac: #e8e8e8;
-	--shadow: 0px 4px 5px var(var(--colors-brand-white-lilac));
-} */
-
 .button {
 	border: 1px solid transparent;
 	padding: 10px 85px;
 	border-radius: 30px;
 	box-shadow: var(--shadow);
 	cursor: pointer;
+	font-size: var(--font-size-2xl);
 }
 
 .button:hover {
@@ -34,7 +28,7 @@
 }
 
 .type-secondary {
-	background: transparent;
+	background: var(--colors-transparent);
 	color: var(--colors-brand-medium-purple);
 	border: 1px solid var(--colors-brand-medium-purple);
 }
@@ -45,4 +39,13 @@
 
 .type-secondary:active {
 	filter: brightness(0.9);
+}
+
+.type-tertiary {
+	background: var(--colors-transparent);
+	color: var(--colors-primary);
+	box-shadow: var(--shadows-none);
+	padding: 0;
+	border-bottom: 1px solid var(--colors-primary);
+	border-radius: var(--border-radius-none);
 }
